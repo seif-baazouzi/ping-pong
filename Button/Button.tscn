@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Theme/Theme.tres" type="Theme" id=1]
+[ext_resource path="res://Button/Button.gd" type="Script" id=2]
+
+[node name="Button" type="Button"]
+margin_left = -48.0
+margin_top = -10.0
+margin_right = 48.0
+margin_bottom = 10.0
+theme = ExtResource( 1 )
+flat = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -48.0
+margin_top = -10.0
+margin_right = 48.0
+margin_bottom = 10.0
+text = "Label"
+align = 1
+
+[connection signal="mouse_entered" from="." to="." method="_on_Button_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_Button_mouse_exited"]
