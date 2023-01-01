@@ -1,12 +1,14 @@
-extends "res://Player/Player.gd"
+extends "res://Nodes/Player/Player.gd"
 
-var ball: KinematicBody2D
+class_name PlayerAI
+
 var offcet: int = 10
-
-func _ready():
-	ball = get_node("/root/Game/Ball")
+var ball: KinematicBody2D
 
 func getInput():
+	if not ball:
+		ball = get_node("/root/Game/Ball")
+	
 	if ball.position.y + offcet < position.y:
 		moveUp = true
 		moveDown = false

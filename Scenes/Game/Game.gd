@@ -8,6 +8,10 @@ onready var player1Score: = $UI/Player1Score
 onready var player2Score: = $UI/Player2Score
 onready var goalLabel: = $UI/GoalLabel
 
+func _ready():
+	if Globals.SinglePlayer:
+		$Playre2.set_script(PlayerAI)
+
 func _on_Player1Goal_body_entered(body):
 	if body is Ball:
 		player2ScroreValue += 1

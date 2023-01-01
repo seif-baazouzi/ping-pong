@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Theme/Theme.tres" type="Theme" id=1]
-[ext_resource path="res://PauseMenu/PauseMenu.gd" type="Script" id=2]
-[ext_resource path="res://Button/Button.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/PauseMenu/PauseMenu.gd" type="Script" id=2]
+[ext_resource path="res://Nodes/Button/Button.tscn" type="PackedScene" id=3]
 
 [node name="PauseMenu" type="Control"]
 pause_mode = 2

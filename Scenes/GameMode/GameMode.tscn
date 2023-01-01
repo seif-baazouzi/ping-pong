@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Nodes/Button/Button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/GameMode/GameMode.gd" type="Script" id=2]
+
+[node name="GameMode" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
+
+[node name="SinglePlayer" parent="." instance=ExtResource( 1 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -72.0
+margin_top = -41.0
+margin_right = 72.0
+margin_bottom = -21.0
+
+[node name="Label" parent="SinglePlayer" index="0"]
+margin_left = -84.5
+margin_right = 84.5
+text = "Single Player"
+
+[node name="MultipplePlayers" parent="." instance=ExtResource( 1 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_top = 14.0
+margin_bottom = 34.0
+
+[node name="Label" parent="MultipplePlayers" index="0"]
+margin_left = -116.5
+margin_right = 116.5
+text = "Multipples Players"
+
+[connection signal="pressed" from="SinglePlayer" to="." method="_on_SinglePlayer_pressed"]
+[connection signal="pressed" from="MultipplePlayers" to="." method="_on_MultipplePlayers_pressed"]
+
+[editable path="SinglePlayer"]
+[editable path="MultipplePlayers"]

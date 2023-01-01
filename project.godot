@@ -12,17 +12,39 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "Ball",
 "language": "GDScript",
-"path": "res://Ball/Ball.gd"
+"path": "res://Nodes/Ball/Ball.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Player1",
+"language": "GDScript",
+"path": "res://Nodes/Player/Player1.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Player2",
+"language": "GDScript",
+"path": "res://Nodes/Player/Player2.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "PlayerAI",
+"language": "GDScript",
+"path": "res://Nodes/Player/PlayerAI.gd"
 } ]
 _global_script_class_icons={
-"Ball": ""
+"Ball": "",
+"Player1": "",
+"Player2": "",
+"PlayerAI": ""
 }
 
 [application]
 
 config/name="ping-pong"
-run/main_scene="res://Main/Main.tscn"
+run/main_scene="res://Scenes/Main/Main.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Globals="*res://Scripts/Globals.gd"
 
 [display]
 
