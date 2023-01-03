@@ -18,10 +18,11 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -72.0
-margin_top = -41.0
-margin_right = 72.0
-margin_bottom = -21.0
+margin_left = -92.0
+margin_top = -58.5
+margin_right = 92.0
+margin_bottom = -33.5
+focus = true
 
 [node name="Label" parent="SinglePlayer" index="0"]
 margin_left = -84.5
@@ -33,16 +34,29 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_top = 14.0
-margin_bottom = 34.0
+margin_left = -120.0
+margin_right = 120.0
 
 [node name="Label" parent="MultipplePlayers" index="0"]
 margin_left = -116.5
 margin_right = 116.5
 text = "Multipples Players"
 
+[node name="Back" parent="." instance=ExtResource( 1 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_top = 29.0
+margin_bottom = 49.0
+
+[node name="Label" parent="Back" index="0"]
+text = "Back"
+
 [connection signal="pressed" from="SinglePlayer" to="." method="_on_SinglePlayer_pressed"]
 [connection signal="pressed" from="MultipplePlayers" to="." method="_on_MultipplePlayers_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
 
 [editable path="SinglePlayer"]
 [editable path="MultipplePlayers"]
+[editable path="Back"]

@@ -24,6 +24,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 margin_top = -48.0
 margin_bottom = -28.0
+focus = true
 
 [node name="Label" parent="Resume" index="0"]
 text = "Resume"
@@ -37,21 +38,25 @@ anchor_bottom = 0.5
 [node name="Label" parent="Restart" index="0"]
 text = "Restart"
 
-[node name="Quit" parent="." instance=ExtResource( 3 )]
+[node name="MainMenu" parent="." instance=ExtResource( 3 )]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_top = 32.0
-margin_bottom = 52.0
+margin_left = -72.0
+margin_top = 29.0
+margin_right = 72.0
+margin_bottom = 49.0
 
-[node name="Label" parent="Quit" index="0"]
-text = "Quit"
+[node name="Label" parent="MainMenu" index="0"]
+margin_left = -58.5
+margin_right = 58.5
+text = "Main Menu"
 
 [connection signal="pressed" from="Resume" to="." method="_on_Resume_pressed"]
 [connection signal="pressed" from="Restart" to="." method="_on_Restart_pressed"]
-[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
+[connection signal="pressed" from="MainMenu" to="." method="_on_MainMenu_pressed"]
 
 [editable path="Resume"]
 [editable path="Restart"]
-[editable path="Quit"]
+[editable path="MainMenu"]
